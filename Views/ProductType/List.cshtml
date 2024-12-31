@@ -1,0 +1,32 @@
+﻿@model IEnumerable<Purchase.Models.ProductType>
+
+@{
+    ViewBag.Title = "List";
+}
+
+<table>
+    <thead>
+        <tr>
+            <td> product Type Id</td>
+            <td>
+                Description
+            </td>
+        </tr>
+    </thead>
+<tbody>
+
+    @foreach(var item in Model)
+            {
+                <tr>
+                    <td>
+                        @item.pk_prodtypeId
+                    </td>
+                    <td>
+                        @item.Description
+                    </td>
+                </tr>
+            }
+</tbody>
+</table>
+
+
